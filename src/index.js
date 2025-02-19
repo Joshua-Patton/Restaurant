@@ -20,6 +20,9 @@ buttons.forEach((button)=>{
         switch (button.getAttribute("id")){
             case "home":
                 home()
+                document.querySelector("button#hmenu").addEventListener("click",()=>{
+                    cleanContent();menu();
+                });
                 break;
             case "menu":
                 menu();
@@ -30,3 +33,4 @@ buttons.forEach((button)=>{
         }
     })
 });
+home();
